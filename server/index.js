@@ -2,6 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import dealRoutes from './routes/dealRoutes.js';
 import authRoutes from './routes/authRoutes.js';
 
 dotenv.config();
@@ -11,6 +12,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use('/api/auth', authRoutes);
+app.use('/api/deals', dealRoutes);
 app.use(cors());
 
 // Database Connection
