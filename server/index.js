@@ -10,10 +10,11 @@ dotenv.config();
 const app = express();
 
 // Middleware
+app.use(cors());
 app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/deals', dealRoutes);
-app.use(cors());
+
 
 // Database Connection
 const connectDB = async () => {
