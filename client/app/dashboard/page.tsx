@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useAuth } from '@/context/AuthContext';
+import { useAuth } from '@/context/authContext';
 import axios from 'axios';
 import { motion } from 'framer-motion';
 import { Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
